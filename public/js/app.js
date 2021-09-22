@@ -13,18 +13,21 @@ weatherForm.addEventListener("submit", (e) => {
   messageTwo.textContent = '';
   // messageThree.textContent = 'Test';
   // fetch data from the api 'then' run a function
-  fetch("/weather?address=" + location).then((res) => {
-    res.json().then((data) => {
-      if (data.err) {
-        messageOne.textContent = data.err;
-      } else {
-        messageOne.textContent = data.locationName;
-        messageTwo.textContent = data.forecast;
-        // messageThree.textContent = messageThree.textContent;
-        // if (data.forecast === "Partly") {
-        //   messageThree.textContent
-        // }
-      }
+  if (search.value === "Wendolyn") {
+    messageOne.textContent = 'I Love You So Much', 
+    fetch("/weather?address=" + location).then((res) => {
+      res.json().then((data) => {
+        if (data.err) {
+          messageOne.textContent = data.err;
+        } else {
+          messageOne.textContent = data.locationName;
+          messageTwo.textContent = data.forecast;
+          // messageThree.textContent = messageThree.textContent;
+          // if (data.forecast === "Partly") {
+          //   messageThree.textContent
+          // }
+        }
+      });
     });
-  });
+  }
 });
