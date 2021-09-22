@@ -20,7 +20,7 @@ weatherForm.addEventListener("submit", (e) => {
       } else {
         messageOne.textContent = data.locationName;
         messageTwo.textContent = data.forecast;
-        messageThree.textContent = messageThree.textContent;
+        // messageThree.textContent = messageThree.textContent;
         // if (data.forecast === "Partly") {
         //   messageThree.textContent
         // }
