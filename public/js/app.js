@@ -14,7 +14,9 @@ weatherForm.addEventListener("submit", (e) => {
   // messageThree.textContent = 'Test';
   // fetch data from the api 'then' run a function
   if (location === "Wendolyn") {
-    messageOne.textContent = 'I Love You So Much';
+    messageOne.textContent = 'I Love You So Much!!!';
+  } else if (location === "Gavin") {
+    messageOne.textContent = "The Best Son Ever!!!"
   }
   fetch("/weather?address=" + location).then((res) => {
     res.json().then((data) => {
